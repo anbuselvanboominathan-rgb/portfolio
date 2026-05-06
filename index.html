@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -21,6 +22,7 @@ body{
     color:white;
 }
 
+/* ================= HEADER ================= */
 
 header{
     display:flex;
@@ -40,7 +42,8 @@ header{
     color:#38bdf8;
 }
 
-/* NAV */
+/* ================= NAVIGATION ================= */
+
 nav{
     display:flex;
 }
@@ -57,13 +60,15 @@ nav a:hover{
     color:#38bdf8;
 }
 
-/* HAMBURGER */
+/* ================= HAMBURGER ================= */
+
 .menu-toggle{
     display:none;
     font-size:28px;
     cursor:pointer;
 }
 
+/* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
@@ -135,11 +140,17 @@ nav a:hover{
 }
 
 @keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
 }
 
 /* ================= SECTIONS ================= */
+
 section{
     padding:100px 8%;
 }
@@ -151,7 +162,9 @@ section{
     color:#38bdf8;
 }
 
-.skills-container, .project-container{
+.skills-container,
+.project-container,
+.certification-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
@@ -175,6 +188,13 @@ section{
     color:#38bdf8;
 }
 
+.card p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+/* ================= FOOTER ================= */
+
 footer{
     text-align:center;
     padding:20px;
@@ -185,13 +205,16 @@ footer{
 /* ================= RESPONSIVE ================= */
 
 /* Large Tablets */
+
 @media(max-width:1024px){
+
     .hero-text h1{
         font-size:38px;
     }
 }
 
 /* Tablets */
+
 @media(max-width:768px){
 
     .menu-toggle{
@@ -238,7 +261,9 @@ footer{
 }
 
 /* Small Mobiles */
+
 @media(max-width:480px){
+
     .hero-text h1{
         font-size:24px;
     }
@@ -258,7 +283,10 @@ footer{
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
+
     <div class="logo">AS</div>
 
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -267,14 +295,23 @@ footer{
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
     </nav>
+
 </header>
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
+
     <div class="hero-text">
+
         <h1>Hello, I'm <span>Anbu Selvan</span></h1>
-        <p>Python Full Stack Developer | B.Sc Computer Science with AI</p>
+
+        <p>
+            Python Full Stack Developer | B.Sc Computer Science with AI
+        </p>
 
         <a href="#contact" class="btn">Hire Me</a>
 
@@ -285,72 +322,165 @@ footer{
         <a href="AnbuselvanResume.pdf" download class="btn resume-btn">
             Download Resume
         </a>
+
     </div>
 
     <div class="hero-img">
         <img src="anbu.jpeg" alt="Anbu Photo">
     </div>
+
 </section>
+
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
+
     <h2 class="section-title">About Me</h2>
+
     <div class="card">
+
         <p>
-        I am a passionate developer focused on building scalable web applications.
-        Experienced in Python, Django, and modern frontend technologies.
-        I have built E-commerce systems and Student Management platforms 
-        solving real-world problems with clean architecture.
+            I am a passionate developer focused on building scalable web applications.
+            Experienced in Python, Django, and modern frontend technologies.
+            I have built E-commerce systems and Student Management platforms
+            solving real-world problems with clean architecture.
         </p>
+
     </div>
+
 </section>
+
+<!-- ================= SKILLS ================= -->
 
 <section id="skills">
+
     <h2 class="section-title">Technical Skills</h2>
+
     <div class="skills-container">
-        <div class="card"><h3>Python</h3><p>Backend development & scripting</p></div>
-        <div class="card"><h3>Django</h3><p>Web application framework</p></div>
-        <div class="card"><h3>JavaScript</h3><p>Interactive frontend UI</p></div>
-        <div class="card"><h3>MySQL</h3><p>Database management</p></div>
-        <div class="card"><h3>HTML & CSS</h3><p>Responsive web design</p></div>
-        <div class="card"><h3>Git & GitHub</h3><p>Version control</p></div>
+
+        <div class="card">
+            <h3>Python</h3>
+            <p>Backend development & scripting</p>
+        </div>
+
+        <div class="card">
+            <h3>Django</h3>
+            <p>Web application framework</p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Interactive frontend UI</p>
+        </div>
+
+        <div class="card">
+            <h3>MySQL</h3>
+            <p>Database management</p>
+        </div>
+
+        <div class="card">
+            <h3>HTML & CSS</h3>
+            <p>Responsive web design</p>
+        </div>
+
+        <div class="card">
+            <h3>Git & GitHub</h3>
+            <p>Version control</p>
+        </div>
+
     </div>
+
 </section>
 
+<!-- ================= PROJECTS ================= -->
+
 <section id="projects">
+
     <h2 class="section-title">Projects</h2>
+
     <div class="project-container">
+
         <div class="card">
             <h3>E-Commerce Web App</h3>
-            <p>Authentication, product catalog, cart & order tracking system.</p>
+            <p>
+                Authentication, product catalog, cart & order tracking system.
+            </p>
         </div>
 
         <div class="card">
             <h3>Institution Management System</h3>
-            <p>Automated campus operations with AI-based verification.</p>
+            <p>
+                Automated campus operations with AI-based verification.
+            </p>
         </div>
+
     </div>
+
 </section>
 
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section id="certifications">
+
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="certification-container">
+
+        <div class="card">
+            <h3>Python Full Stack Development</h3>
+            <p>QSpiders, Chromepet</p>
+            <p>Status: On-going</p>
+        </div>
+
+        <div class="card">
+            <h3>Generative AI for Beginners</h3>
+            <p>Simplilearn</p>
+            <p>Completed: May 2026</p>
+            <p>Certificate Code: 10194517</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
 <section id="contact">
+
     <h2 class="section-title">Contact</h2>
+
     <div class="card">
+
         <p>Email: anbuselvanboominathan@gmail.com</p>
-        <p>GitHub: github.com/anbuselvanboominathan-rgb</p>
+
+        <p>
+            GitHub: github.com/anbuselvanboominathan-rgb
+        </p>
+
         <br>
+
         <a href="mailto:anbuselvanboominathan@gmail.com" class="btn">
             Send Email
         </a>
+
     </div>
+
 </section>
 
-<!-- <footer>
+<!-- ================= FOOTER ================= -->
+
+<footer>
     © 2026 Anbu Selvan B | Designed with ❤️
-</footer> -->
+</footer>
+
+<!-- ================= SCRIPT ================= -->
 
 <script>
+
 function toggleMenu(){
     document.getElementById("navMenu").classList.toggle("active");
 }
+
 </script>
 
 </body>
